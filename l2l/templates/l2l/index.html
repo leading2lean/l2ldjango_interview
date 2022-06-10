@@ -1,5 +1,5 @@
 {% load static %}
-{#{% load l2l_extras %}#}
+{% load datetime_extras %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -55,10 +55,10 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
           <h1 class="display-4 fw-normal">Punny headline</h1>
           <p class="lead fw-normal">Yes this is a rip-off from one of Bootstrap's example html pages.</p>
-          <p class="lead fw-normal">Today's date is: {{ now }}</p>
-          <p class="lead fw-normal">Today's ISO date is: {{ iso }}</p>
-          {#<p class="lead fw-normal">Today's date from a date is: {{ now|l2l_dt }}</p>#}
-          {#<p class="lead fw-normal">Today's date from a string is: {{ iso|l2l_dt }}</p>#}
+          <p class="lead fw-normal">Today's date is: <br>{{ now }}</p>
+          <p class="lead fw-normal">Today's ISO date is: <br>{{ iso }}</p>
+          <p class="lead fw-normal">Today's date from a date is: <br>{{ now|to_numerical_datetime }}</p>
+          <p class="lead fw-normal">Today's date from a string is: <br>{{ iso|to_numerical_datetime }}</p>
           <a class="btn btn-outline-secondary" href="#">Coming soon</a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
