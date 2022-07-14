@@ -1,8 +1,11 @@
 from datetime import datetime
 from . import register
+from typing import (
+    Union
+)
 
-@register.filter(name='l2l_dt')
-def l2l_dt(value):
+@register.filter(name='l2l_dt_format')
+def l2l_dt_format(value: Union[datetime, str]) -> str:
     '''
     Takes a date in format: "%Y-%m-%dT%H:%M:%S"
     Returns format: "%Y-%m-%d %H:%M:%S".
