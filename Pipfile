@@ -3,12 +3,13 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[dev-packages]
 
 [packages]
 django = "==3.2.3"
-django-stubs = "*"
-python-dateutil = "*"
+python-dateutil = "==2.8.2"
+
+[dev-packages]
+django-stubs = "==1.12.0"
 
 [requires]
 python_version = "3.7"
